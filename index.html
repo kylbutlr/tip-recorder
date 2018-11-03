@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
     <style>
         html {
             background-color: #ececec;
@@ -282,7 +283,8 @@
                     $input.focus();
                 }
                 else {
-                    const newDate = new Date($date.value);
+                    const dateValue = new Date($date.value);
+                    const newDate = new Date(dateValue.getTime() + dateValue.getTimezoneOffset() * 60000);
                     const thedate = newDate.getDate();
                     const month = newDate.getMonth();
                     const year = newDate.getFullYear();
@@ -581,7 +583,8 @@
             
             function dateToday() {
                 const d = new Date();
-                $date.value = d;
+                const dt = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
+                $date.value = dt;
             }
             
             function save() {
