@@ -98,7 +98,7 @@
             font-size: 14px;
             margin: 5px 0 0 0;
             padding: 0 0 0 25px;
-            width: 89%;
+            width: 85%;
         }
         .cntrtxt{
             text-align: center;
@@ -233,7 +233,7 @@
             <div class="form-div">
                 <form id="form" action="">
                     <input class="input-boxes w100 block lnhght cntrtxt input" id="input" type="number" min="1" placeholder="Tip Ammount" maxlength="5" autocomplete="off" required>
-                    <input class="input-boxes block lnhght cntrtxt date" type="date" id="date" required >
+                    <input class="input-boxes block lnhght cntrtxt date" type="text" id="date" required >
                     <button type="submit" class="button w100 block cntrtxt lnhght rectip">Add Tip</button></form>
                 <button class="button w100 block cntrtxt lnhght" id="clrBtn">Clear All</button>
                 <button class="button w100 block cntrtxt lnhght save-backup" id="saveBackupBtn">Save Backup</button>
@@ -282,8 +282,7 @@
                     $input.focus();
                 }
                 else {
-                    const dateValue = new Date($date.value);
-                    const newDate = new Date(dateValue.getTime() + dateValue.getTimezoneOffset() * 60000);
+                    const newDate = new Date($date.value);
                     const thedate = newDate.getDate();
                     const month = newDate.getMonth();
                     const year = newDate.getFullYear();
@@ -582,8 +581,7 @@
             
             function dateToday() {
                 const d = new Date();
-                const dt = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
-                $date.valueAsDate = dt;
+                $date.valueAsDate = d;
             }
             
             function save() {
