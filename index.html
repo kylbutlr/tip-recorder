@@ -98,12 +98,15 @@
             font-size: 14px;
             margin: 5px 0 0 0;
             padding: 0 0 0 25px;
+            width: 89%;
         }
         .cntrtxt{
             text-align: center;
         }
         .block {
             display: inline-block;
+        }
+        .w100 {
             width: 100%;
         }
         .rectip {
@@ -229,25 +232,17 @@
         <div class="main-div" id="mainDiv">
             <div class="form-div">
                 <form id="form" action="">
-                    <input class="input-boxes block lnhght cntrtxt input" id="input" type="number" min="1" placeholder="Tip Ammount" maxlength="5" autocomplete="off" required>
+                    <input class="input-boxes w100 block lnhght cntrtxt input" id="input" type="number" min="1" placeholder="Tip Ammount" maxlength="5" autocomplete="off" required>
                     <input class="input-boxes block lnhght cntrtxt date" type="date" id="date" required >
-                    <button type="submit" class="button block cntrtxt lnhght rectip">Add Tip</button></form>
-                <button class="button block cntrtxt lnhght" id="clrBtn">Clear All</button>
-                <button class="button block cntrtxt lnhght save-backup" id="saveBackupBtn">Save Backup</button>
-                <button class="button block cntrtxt lnhght get-backup" id="getBackupBtn">Get Backup</button>
+                    <button type="submit" class="button w100 block cntrtxt lnhght rectip">Add Tip</button></form>
+                <button class="button w100 block cntrtxt lnhght" id="clrBtn">Clear All</button>
+                <button class="button w100 block cntrtxt lnhght save-backup" id="saveBackupBtn">Save Backup</button>
+                <button class="button w100 block cntrtxt lnhght get-backup" id="getBackupBtn">Get Backup</button>
             </div>
             <div class="list-div" id="listDiv"></div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="jquery/jquery-ui.js"></script>
-        <script>
-            $(function() {
-                if ($("#date").type!="date"){
-                    $("#date").datepicker();
-                }
-                $("#mainDiv").toggle().delay(1000).slideDown(1000);
-            });
-        </script>        
+        <script src="jquery/jquery-ui.js"></script>        
         <script>
             var svData = [];
             var key;
@@ -265,6 +260,19 @@
             const $getBackupBtn = document.getElementById("getBackupBtn");
             const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
             const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            $(function() {
+                //if ($date.type!="date"){
+                    $("#date").datepicker({
+                        showOn: "button",
+                        buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+                        buttonImageOnly: true,
+                        buttonText: "Select date",
+                        dateFormat: 'yy-mm-dd'
+                    });
+                //}
+                $("#mainDiv").toggle().delay(1000).slideDown(1000);
+            });
 
             const formSubmit = (e) => {
                 e.preventDefault();
