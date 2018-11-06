@@ -1,0 +1,28 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <title>Kalina's Tips</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery/jquery-ui.js"></script>  
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+        <div class="header">
+            <h1>Kalina's Tips</h1>
+        </div>
+        <div class="main-div" id="mainDiv">
+            <div class="form-div">
+                <form id="form" action="">
+                    <input class="input-boxes w100 block lnhght cntrtxt input" id="input" type="number" min="1" placeholder="Tip Ammount" maxlength="5" autocomplete="off" required>
+                    <input class="input-boxes block lnhght cntrtxt date" type="text" id="date" required >
+                    <button type="submit" class="button w100 block cntrtxt lnhght rectip">Add Tip</button></form>
+                <button class="button w100 block cntrtxt lnhght" id="clrBtn">Clear All</button>
+                <button class="button w100 block cntrtxt lnhght save-backup" id="saveBackupBtn">Save Backup</button>
+                <button class="button w100 block cntrtxt lnhght get-backup" id="getBackupBtn">Get Backup</button>
+            </div>
+            <div class="list-div" id="listDiv"></div>
+        </div>      
+</body>
+</html>
