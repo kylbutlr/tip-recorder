@@ -1,3 +1,17 @@
+$(function() {
+    $(".main-div").hide()
+    $(".header").click(function(e) {
+        $(".main-div").slideToggle(1000)
+    });
+    $("#date").datepicker({
+        showOn: "button",
+        buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        dateFormat: 'yy-mm-dd'
+    });
+});
+
 var svData = [];
 var key;
 const $form = document.querySelector("#form");
@@ -14,17 +28,6 @@ const $saveBackupBtn = document.getElementById("saveBackupBtn");
 const $getBackupBtn = document.getElementById("getBackupBtn");
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-$(function() {
-        $("#date").datepicker({
-            showOn: "button",
-            buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
-            buttonImageOnly: true,
-            buttonText: "Select date",
-            dateFormat: 'yy-mm-dd'
-        });
-    $("#mainDiv").toggle().delay(1000).slideDown(1000);
-});
 
 const formSubmit = (e) => {
     e.preventDefault();
