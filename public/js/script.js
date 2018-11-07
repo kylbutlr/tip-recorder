@@ -28,7 +28,7 @@ $(function() {
 
 const formSubmit = (e) => {
     e.preventDefault();
-    if ($input.value === " "){
+    if ($input.value === " ") {
         alert("Please enter a tip ammount.");
         $input.value = "";
         $input.focus();
@@ -81,7 +81,7 @@ function renderDiv(date, month, year) {
         yrDiv.appendChild(h3a);
         newDiv.appendChild(yrDiv);
         newDiv.appendChild(newYear);
-        if ($listDiv.childElementCount>0){
+        if ($listDiv.childElementCount>0) {
             var arr = new Array();
             arr.push(year)
             sortYearArr(arr, year);
@@ -102,11 +102,11 @@ function renderDiv(date, month, year) {
             newDiv.classList.add("top-div");
             $listDiv.appendChild(newDiv);
         }
-        setTimeout(function(){
+        setTimeout(function() {
             newDiv.classList.add("visible");
             newDiv.classList.remove("hidden");
         });
-        setTimeout(function(){
+        setTimeout(function() {
             newDiv.classList.remove("visible");
         }, 1000);
     }
@@ -138,7 +138,7 @@ function renderDiv(date, month, year) {
         newMonth.appendChild(h3);
         newMonth.appendChild(h3a);
         newMonth.appendChild(ul);
-        if (yyear.childElementCount>0){
+        if (yyear.childElementCount>0) {
             var arr = new Array();
             arr.push(month)
             sortMonthArr(arr, year);
@@ -156,11 +156,11 @@ function renderDiv(date, month, year) {
         else {
             yyear.appendChild(newMonth);
         }
-        setTimeout(function(){
+        setTimeout(function() {
             newMonth.classList.add("visible");
             newMonth.classList.remove("hidden");
         });
-        setTimeout(function(){
+        setTimeout(function() {
             newMonth.classList.remove("visible");
         }, 1000);
     }
@@ -192,7 +192,7 @@ function renderTodo(tips, key, newDate) {
     const temp2 = parseInt(tips.text);
     h3y.innerText = temp0 + temp2;
     h3m.innerText = temp1 + temp2;
-    if (ul.childElementCount>0){
+    if (ul.childElementCount>0) {
         var arr = new Array();
         arr.push(tdate)
         sortListArr(arr, month, year, tdate);
@@ -210,11 +210,11 @@ function renderTodo(tips, key, newDate) {
     else {
         ul.appendChild(newList);
     }
-    setTimeout(function(){
+    setTimeout(function() {
         newList.classList.add("post-visible");
         newList.classList.remove("new-post");
     });
-    setTimeout(function(){
+    setTimeout(function() {
         newList.classList.remove("post-visible");
     }, 1000);
 }
@@ -278,7 +278,7 @@ const clrClick = (e) => {
     }
 }
 
-function formatDate(date){
+function formatDate(date) {
     return date.getDate() + ", " + days[date.getDay()];
 }                
 
@@ -302,7 +302,7 @@ function deletePost(e) {
     svData.splice(target, 1);
     e.target.parentNode.classList.add("post-delete");
     if (lyear.textContent == 0) {
-        if ($listDiv.children[0].dataset.year == year && $listDiv.childElementCount > 1){
+        if ($listDiv.children[0].dataset.year == year && $listDiv.childElementCount > 1) {
             $listDiv.children[1].classList.add("top-div");
         }
         dltYear = true;
@@ -315,7 +315,7 @@ function deletePost(e) {
     if (dltYear == true) {
             yrDiv.remove();
     }
-    setTimeout(function(){
+    setTimeout(function() {
         e.target.parentNode.remove();
         if (dltMonth == true) {
             mmonth.remove();
@@ -323,7 +323,7 @@ function deletePost(e) {
     }, 250);
 }
 
-function dltBtn(key){
+function dltBtn(key) {
     const dltBtn = document.createElement("button");
     dltBtn.dataset.key = key;
     dltBtn.className = "delete-button button";
@@ -354,7 +354,7 @@ const getBackup = (e) => {
         }
         svData = JSON.parse(backup);
         if (svData.length>0) {
-            for (var i=0; i<svData.length; i++){
+            for (var i=0; i<svData.length; i++) {
                 svData[i].key = i;
                 const date = new Date(svData[i].date);
                 renderTodo(svData[i], i, date);
@@ -372,7 +372,7 @@ function getSaved() {
     if (temp != null) {
         svData = JSON.parse(temp);
         if (svData.length>0) {
-            for (var i=0; i<svData.length; i++){
+            for (var i=0; i<svData.length; i++) {
                 svData[i].key = i;
                 const date = new Date(svData[i].date);
                 renderTodo(svData[i], i, date);
