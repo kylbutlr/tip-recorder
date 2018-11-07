@@ -16,7 +16,6 @@ const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 $(function() {
-    //if ($date.type!="date"){
         $("#date").datepicker({
             showOn: "button",
             buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
@@ -24,7 +23,6 @@ $(function() {
             buttonText: "Select date",
             dateFormat: 'yy-mm-dd'
         });
-    //}
     $("#mainDiv").toggle().delay(1000).slideDown(1000);
 });
 
