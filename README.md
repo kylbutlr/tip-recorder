@@ -1,4 +1,4 @@
 # tip-recorder
-Tip Recorder
+Javascript Tip Recorder
 
 (Old Project)
