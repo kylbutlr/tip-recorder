@@ -1,5 +1,8 @@
-var svData = []
-var key
+/* jshint asi: true */
+/*jshint esversion: 6 */
+
+let svData = []
+let key
 const $form = document.querySelector("#form")
 const $input = document.querySelector("#input")
 const $date = document.querySelector("#date")
@@ -69,10 +72,10 @@ function renderDiv(date, month, year) {
         newDiv.appendChild(yrDiv)
         newDiv.appendChild(newYear)
         if ($listDiv.childElementCount>0) {
-            var arr = new Array()
+            let arr = []
             arr.push(year)
             sortYearArr(arr, year)
-            var t = arr.indexOf(year)
+            let t = arr.indexOf(year)
             if (t === 0) {
                 $listDiv.firstChild.classList.remove("top-div")
                 newDiv.classList.add("top-div")
@@ -125,10 +128,10 @@ function renderDiv(date, month, year) {
         newMonth.appendChild(h3a)
         newMonth.appendChild(ul)
         if (yyear.childElementCount>0) {
-            var arr = new Array()
+            let arr = []
             arr.push(month)
             sortMonthArr(arr, year)
-            var t = arr.indexOf(month)
+            let t = arr.indexOf(month)
             if (t === 0) {
                 yyear.insertBefore(newMonth, yyear.firstChild)
             }
@@ -179,10 +182,10 @@ function renderTodo(tips, key, newDate) {
     h3y.innerText = temp0 + temp2
     h3m.innerText = temp1 + temp2
     if (ul.childElementCount>0) {
-        var arr = new Array()
+        let arr = []
         arr.push(tdate)
         sortListArr(arr, month, year, tdate)
-        var t = arr.indexOf(tdate)
+        let t = arr.indexOf(tdate)
         if (t === 0) {
             ul.insertBefore(newList, ul.firstChild)
         }
@@ -209,7 +212,7 @@ function sortYearArr(arr, year) {
     const list = document.getElementById("listDiv")
     for (i=0;i<list.childElementCount;i++) {
         if (list.children[i]) {
-            var t = list.children[i].dataset.year
+            let t = list.children[i].dataset.year
             t = parseInt(t)
             arr.push(t)
         }
@@ -223,7 +226,7 @@ function sortMonthArr(arr, year) {
     const yyear = document.getElementById("y"+year)
     for (i=0;i<yyear.childElementCount;i++) {
         if (yyear.children[i]) {
-            var t = yyear.children[i].dataset.month
+            let t = yyear.children[i].dataset.month
             t = parseInt(t)
             arr.push(t)
         }
@@ -237,7 +240,7 @@ function sortListArr(arr, month, year,  tdate) {
     const ul = document.getElementById("ul-m"+month+"y"+year)
     for (i=0;i<ul.childElementCount;i++) {
         if (ul.children[i]) {
-            var t = ul.children[i].dataset.tdate
+            let t = ul.children[i].dataset.tdate
             t = parseInt(t)
             arr.push(t)
         }
@@ -270,8 +273,8 @@ function formatDate(date) {
 
 function deletePost(e) {
     e.preventDefault()
-    var dltMonth = false
-    var dltYear = false
+    let dltMonth = false
+    let dltYear = false
     const target = svData.findIndex(x => x.key == e.target.dataset.key)
     const month = svData[target].month
     const year = svData[target].year
@@ -333,7 +336,7 @@ function getSaved() {
     if (temp != null) {
         svData = JSON.parse(temp)
         if (svData.length>0) {
-            for (var i=0;i<svData.length;i++) {
+            for (let i=0;i<svData.length;i++) {
                 svData[i].key = i
                 const date = new Date(svData[i].date)
                 renderTodo(svData[i], i, date)
