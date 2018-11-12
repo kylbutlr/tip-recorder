@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Cedarville+Cursive" rel="stylesheet">
     <link rel="stylesheet" href="js/jquery/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Tip Recorder</title>
 </head>
 <body>
-        <div class="header">
-            <h1>Tip Recorder</h1>
+    <div class="header-glass"></div>
+    <div class="header">
+        <h1>Tip Recorder</h1>
+    </div>
+    <div class="main-glass"></div>
+    <div class="main-div">
+        <div class="form-div">
+            <form id="form" action="">
+                <input id="input" type="number" min="1" placeholder="Tip Ammount" maxlength="5" autocomplete="off" required>
+                <input class="date" type="text" id="date" required >
+                <button type="submit" class="button add-button">Add Tip</button></form>
+            <button class="button clear-button" id="clrBtn">Clear All</button>
         </div>
-        <div class="main-div">
-            <div class="form-div">
-                <form id="form" action="">
-                    <input id="input" type="number" min="1" placeholder="Tip Ammount" maxlength="5" autocomplete="off" required>
-                    <input class="date" type="text" id="date" required >
-                    <button type="submit" class="button add-button">Add Tip</button></form>
-                <button class="button clear-button" id="clrBtn">Clear All</button>
-            </div>
-            <div class="list-container">
-                <div class="list-div" id="listDiv"></div>
-            </div>
-        </div>      
+        <div class="list-container">
+            <div class="list-div" id="listDiv"></div>
+        </div>
+    </div>      
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/jquery/jquery-ui.js"></script>  

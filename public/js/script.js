@@ -312,7 +312,7 @@ function deletePost(e) {
 function dltBtn(key) {
     const dltBtn = document.createElement("button")
     dltBtn.dataset.key = key
-    dltBtn.className = "delete-button button"
+    dltBtn.className = "delete-button"
     dltBtn.textContent = "x"
     dltBtn.addEventListener("click", deletePost)
     return dltBtn
@@ -356,8 +356,10 @@ $clrBtn.addEventListener("click", clrClick, false)
 
 $(function() {
     $(".main-div").hide().delay(500).slideToggle(1000)
+    $(".main-glass").hide().delay(500).slideToggle(1000)
     $(".header").click(function(e) {
         $(".main-div").slideToggle(1000)
+        $(".main-glass").slideToggle(1000)
     })
     $("#date").datepicker({
         showOn: "button",
