@@ -117,7 +117,7 @@ input {
 }
 .header {
     background: #222222aa;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 5px 15px -1px black;
     cursor: pointer;
     height: 5vh;
@@ -127,9 +127,11 @@ input {
     text-align: center;
     width: 95vw;
 }
-.header:active,
-.header-glass:active {
+.header:active {
     box-shadow: inset 0px 7px 20px -2px black;
+    transform: scale(0.975);
+}
+.header:active > .header-glass {
     transform: scale(0.975);
 }
 .header-glass {
