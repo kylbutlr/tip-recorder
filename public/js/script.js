@@ -357,9 +357,15 @@ $clrBtn.addEventListener("click", clrClick, false)
 $(function() {
     $(".main-div").hide().delay(500).slideToggle(1000)
     $(".main-glass").hide().delay(500).slideToggle(1000)
+    $(".form-div").hide().delay(500).slideToggle(1000)
+    $(".list-container").hide().delay(500).slideToggle(1000)
+    $(".year-div").hide().delay(500).slideToggle(1000)
     $(".header").click(function(e) {
         $(".main-div").slideToggle(1000)
         $(".main-glass").slideToggle(1000)
+        $(".form-div").slideToggle(1000)
+        $(".list-container").slideToggle(1000)
+        $(".year-div").slideToggle(1000)
     })
     $("#date").datepicker({
         showOn: "button",
