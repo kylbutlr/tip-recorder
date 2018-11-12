@@ -45,7 +45,7 @@ function renderDiv(date, month, year) {
         newDiv.dataset.year = year
         newYear.dataset.year = year
         newDiv.classList.add("year-div")
-        newYear.classList.add("list-div")
+        newYear.classList.add("list")
         newDiv.setAttribute("id", "ly"+year)
         newYear.setAttribute("id", "y"+year)
         newDiv.classList.add("hidden")
@@ -62,7 +62,7 @@ function renderDiv(date, month, year) {
         h3a.setAttribute("id", "h3-y"+year)
         h3a.classList.add("h3")
         const yrDiv = document.createElement("div")
-        yrDiv.classList.add("yr-div")
+        yrDiv.classList.add("year-header")
         yrDiv.appendChild(h2)
         yrDiv.appendChild(h3)
         yrDiv.appendChild(h3a)
@@ -105,7 +105,6 @@ function renderDiv(date, month, year) {
         newMonth.dataset.month = month
         newMonth.classList.add("month-div")
         newMonth.setAttribute("id", "m"+month+"y"+year)
-        newMonth.classList.add("list")
         newMonth.classList.add("hidden")
         const h2 = document.createElement("h2")
         h2.classList.add("mh")
