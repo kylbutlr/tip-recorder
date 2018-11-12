@@ -1,2 +1,4 @@
 # tip-recorder
-Tip Recorder (super messy code)
+Tip Recorder
+
+(Old Project)
