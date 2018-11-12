@@ -1,5 +1,5 @@
 /* jshint asi: true */
-/*jshint esversion: 6 */
+/* jshint esversion: 6 */
 
 let svData = []
 let key
