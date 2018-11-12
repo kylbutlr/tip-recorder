@@ -188,7 +188,7 @@ input {
     box-shadow: inset 0 5px 10px -3px black;
     padding: 2vh 2vh 0;
     width: 72vw;
-    height: 76vh;
+    height: 78vh;
 }
 .list-div {
     border-radius: 10px 10px 0 0;
@@ -196,7 +196,7 @@ input {
     padding: 0;
     vertical-align: top;
     width: 100%;
-    height: 76vh;
+    height: 78vh;
 }
 .year-header {
     background: #222222aa;
