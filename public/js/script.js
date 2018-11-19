@@ -363,6 +363,9 @@ $(function() {
     $(".form-div").hide().delay(500).slideToggle(1000)
     $(".list-container").hide().delay(500).slideToggle(1000)
     $(".year-div").hide().delay(500).slideToggle(1000)
+    $("#form").hide().delay(1500).fadeToggle(1000)
+    $("#clrBtn").hide().delay(1500).fadeToggle(1000)
+    $("#listDiv").hide().delay(1500).fadeToggle(1000)
     $(".header").click(function(e) {
         $(".main-div").slideToggle(1000)
         $(".main-glass").slideToggle(1000)
