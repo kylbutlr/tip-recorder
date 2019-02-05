@@ -360,7 +360,7 @@ $(function() {
   });
   $("#date").datepicker({
     showOn: "button",
-    buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+    buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
     buttonImageOnly: true,
     buttonText: "Select date",
     dateFormat: 'yy-mm-dd'
