@@ -1,3 +1,3 @@
 # Tip Recorder
-### Vanilla JS Tip Recorder
-#### (Old Project)
+### Tip Recorder application
+#### (Old/Outdated Project)
