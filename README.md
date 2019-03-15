@@ -1,7 +1,6 @@
 # Tip Recorder
-### Tip Recorder application
 
-This is a Tip Recorder, a project created for easily tracking past earned tips as a tipped worker in the service industry.
+This is a Tip Recorder application, created for easily tracking past earned tips as a tipped worker in the service industry.
 
 The application will automatically order and calculate totals for tip amounts based off of their inputted date.
 
